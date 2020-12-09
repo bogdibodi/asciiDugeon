@@ -23,7 +23,6 @@
 
 
 			if (roomNum != 0) {
-				std::cout << " in roomNum if statement" << std::endl;
 				// dig a corridor from last room
 				map.dig(lastx, lasty, x + w / 2, lasty);
 				map.dig(x + w / 2, lasty, x + w / 2, y + h / 2);
