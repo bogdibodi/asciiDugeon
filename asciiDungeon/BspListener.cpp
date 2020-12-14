@@ -1,8 +1,5 @@
-#include "libtcod.hpp"
-#include "Map.h"
-#include "BspListener.h"
-#include "Engine.h"
-#include <iostream>
+#include <stdio.h>
+#include "main.h"
 
 	BspListener::BspListener(Map& map) 
 		: map(map)

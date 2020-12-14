@@ -1,7 +1,4 @@
-#include "Actor.h"
-#include "libtcod.hpp"	
-#include "Engine.h"
-#include "Map.h"
+#include "main.h"
 
 	Actor::Actor(int x, int y, int ch,const char *name, const TCODColor& col)
 		: x(x)
@@ -9,18 +6,22 @@
 		, ch(ch)
 		, col(col)
 		, name(name)
+		, blocks(true)
+		, attacker(NULL)
+		, destructible(NULL)
+		, ai(NULL)
 	{}
-
 
 	void Actor::render() const {
 		TCODConsole::root->setChar(x, y, ch);
 		TCODConsole::root->setCharForeground(x, y, col);		
 }
-
 	void Actor::update() {
-		printf("The %s growls\n", name);
+		if (ai) ai->update(this);
 	}
 
+	// old code
+	/*
 	bool Actor::moveOrAttack(int x, int y) {
 		if (engine.map->isWall(x, y)) return false;
 
@@ -36,3 +37,5 @@
 			return true;
 		}
 	}
+	*/
+	

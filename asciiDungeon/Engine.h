@@ -14,6 +14,11 @@ public:
 	Map* map;
 	int fovRadius;
 
+	// screen data
+	int screenWidth;
+	int screenHeight;
+	TCOD_key_t lastKey;
+
 	enum GameStatus {
 		STARTUP,
 		IDLE,
@@ -23,11 +28,13 @@ public:
 	}gameStatus;
 
 
-
-	Engine();
+	Engine(int screenWidth, int screenHeight);
 	~Engine();
+
 	void update();
 	void render();
+	void sendToBack(Actor* actor);
+
 private:
 	bool computeFov;
 };

@@ -1,12 +1,5 @@
-#include "libtcod.hpp"
-#include "Map.h"
-
-#include "Actor.h"
-#include "BspListener.h"
-#include "Engine.h"
-
-
-
+#include <stdio.h>
+#include "main.h"
 
 
 	Map::Map(int width, int height) 
@@ -20,7 +13,6 @@
 		BspListener listener(*this);
 		bsp.traverseInvertedLevelOrder(&listener, NULL);
 	}
-
 	Map::~Map() {
 		delete[] tiles;
 		delete map;
@@ -29,7 +21,6 @@
 	bool Map::isWall(int x, int y) const {
 		return !map->isWalkable(x, y);
 	}
-	
 	bool Map::isExplored(int x, int y) const {
 		return tiles[x + y * width].explored;
 	}
@@ -41,12 +32,12 @@
 		}
 		return false;
 	}
-
 	void Map::computeFov() {
 		map->computeFov(engine.player->x, engine.player->y,
 			engine.fovRadius);
 	}
 
+	// old code
 	/*
 	  void Map::setWall(int x, int y) {
 		tiles[x + y * width].canWalk = false;
@@ -61,28 +52,32 @@
 		for (Actor** iterator = engine.actors.begin();
 			iterator != engine.actors.end(); iterator++) {
 			Actor* actor = *iterator;
-			if (actor->x == x && actor->y == y) {
+			if ( actor-> blocks && actor->x == x && actor->y == y) {
 				return false;
 			}
 		}
 	}
-	
-	
 	void Map::addMonster(int x, int y) {
 		TCODRandom* rng = TCODRandom::getInstance();
-		//make orc
 		if (rng->getInt(0, 100) < 80) {
-			engine.actors.push(new Actor(x, y, 'o', "orc",
-				TCODColor::desaturatedGreen));
+			// create an orc
+			Actor* orc = new Actor(x, y, 'o', "orc",
+				TCODColor::desaturatedGreen);
+			orc->destructible = new MonsterDestructible(10, 0, "dead orc");
+			orc->attacker = new Attacker(3);
+			orc->ai = new MonsterAi();
+			engine.actors.push(orc);
 		}
-		else // make troll {
-			engine.actors.push(new Actor(x, y, 'T', "troll",
-				TCODColor::darkerGreen));
+		else {
+			// create a troll
+			Actor* troll = new Actor(x, y, 'T', "troll",
+				TCODColor::darkerGreen);
+			troll->destructible = new MonsterDestructible(16, 1, "troll carcass");
+			troll->attacker = new Attacker(4);
+			troll->ai = new MonsterAi();
+			engine.actors.push(troll);
 		}
-		
-	
-
-
+		}
 	void Map::dig(int x1, int y1, int x2, int y2) {
 		if (x2 < x1) {
 			int tmp = x2;
@@ -102,7 +97,6 @@
 			}
 		}
 	}
-
 	void Map::createRoom(bool first, int x1, int y1, int x2, int y2) {
 		dig(x1, y1, x2, y2);
 		if (first) {
@@ -123,13 +117,11 @@
 			}
 		}
 	}
-
 	void Map::render() const {
 		static const TCODColor darkWall(0, 0, 100);
 		static const TCODColor darkGround(150, 50, 50);
 		static const TCODColor lightWall(130, 110, 50);
 		static const TCODColor lightGround(200, 180, 50);
-
 
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
