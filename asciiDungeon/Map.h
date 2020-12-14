@@ -11,12 +11,20 @@ public:
 
 	static const int ROOM_MAX_SIZE = 12;
 	static const int ROOM_MIN_SIZE = 6;
+	static const int MAX_ROOM_MONSTERS = 3;
 
 	int width, height;
 
+	// construcotr and destructor
 	Map(int width, int height);
 	~Map();
+
+	// check for collision
 	bool isWall(int x, int y) const;
+	bool canWalk(int x, int y) const;
+
+	// Add monster
+	void addMonster(int x, int y);
 
 	// F O V
 	bool isInFov(int x, int y) const;

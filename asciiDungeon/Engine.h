@@ -14,6 +14,16 @@ public:
 	Map* map;
 	int fovRadius;
 
+	enum GameStatus {
+		STARTUP,
+		IDLE,
+		NEW_TURN,
+		VICTORY,
+		DEFEAT,
+	}gameStatus;
+
+
+
 	Engine();
 	~Engine();
 	void update();

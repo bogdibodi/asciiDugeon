@@ -52,8 +52,34 @@
 		tiles[x + y * width].canWalk = false;
 	}
 	*/
+
+	bool Map::canWalk(int x, int y) const {
+		if (isWall(x, y)) {
+			return false;
+			// because this is just a wall
+		}
+		for (Actor** iterator = engine.actors.begin();
+			iterator != engine.actors.end(); iterator++) {
+			Actor* actor = *iterator;
+			if (actor->x == x && actor->y == y) {
+				return false;
+			}
+		}
+	}
 	
 	
+	void Map::addMonster(int x, int y) {
+		TCODRandom* rng = TCODRandom::getInstance();
+		//make orc
+		if (rng->getInt(0, 100) < 80) {
+			engine.actors.push(new Actor(x, y, 'o', "orc",
+				TCODColor::desaturatedGreen));
+		}
+		else // make troll {
+			engine.actors.push(new Actor(x, y, 'T', "troll",
+				TCODColor::darkerGreen));
+		}
+		
 	
 
 
@@ -86,9 +112,14 @@
 		}
 		else {
 			TCODRandom* rng = TCODRandom::getInstance();
-			if (rng->getInt(0, 3) == 0) {
-				engine.actors.push(new Actor((x1 + x2) / 2, (y1 + y2) / 2, '@',
-					TCODColor::yellow));
+			int nbMonsters = rng->getInt(0, MAX_ROOM_MONSTERS);
+			while (nbMonsters > 0) {
+				int x = rng->getInt(x1, x2);
+				int y = rng->getInt(y1, y2);
+				if (canWalk(x, y)) {
+					addMonster(x, y);
+				}
+				nbMonsters--;
 			}
 		}
 	}
