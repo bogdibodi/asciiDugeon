@@ -56,6 +56,7 @@
 				return false;
 			}
 		}
+		return true;
 	}
 	void Map::addMonster(int x, int y) {
 		TCODRandom* rng = TCODRandom::getInstance();

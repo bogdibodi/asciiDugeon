@@ -69,12 +69,12 @@ void MonsterAi::moveOrAttack(Actor* owner, int targetx, int targety) {
         dx = (int)(round(dx / distance));
         dy = (int)(round(dy / distance));
 
+        std::cout << "Monster coords:" << std::endl;
+        std::cout << owner->x << " " << owner->y << std::endl;
 
-
-        if (engine.map->canWalk(owner->x + dx, owner->y + dy)) {
+        if (engine.map->canWalk(owner->x + dx, owner->y + dy) == true) {
             owner->x += dx;
             owner->y += dy;
-
         }
     }
    else if (owner->attacker) {
