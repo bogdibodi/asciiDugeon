@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <iostream>
 #include "main.h"
 
 void PlayerAi::update(Actor* owner) {
@@ -38,7 +38,7 @@ bool PlayerAi::moveOrAttack(Actor* owner, int targetx, int targety) {
         Actor* actor = *iterator;
         if (actor->destructible && actor->destructible->isDead()
             && actor->x == targetx && actor->y == targety) {
-            printf("There's a %s here", actor->name);
+            printf("There's a %s here\n", actor->name);
         }
     }
     owner->x = targetx;
@@ -58,33 +58,26 @@ void MonsterAi::update(Actor* owner) {
 
 }
 
-bool Ai::canAttack(int x, int y) {
-    int targetx = engine.player->x;
-    int targety = engine.player->y;
-
-    if ((targetx == x - 1 || targetx == x + 1 || targetx == x) && (targety == y - 1 || targety == y + 1 || targety == y) )
-        return true;
-    
-    return false;
-}
-
-
-
 void MonsterAi::moveOrAttack(Actor* owner, int targetx, int targety) {
-    int dx = targetx - owner->x;
-    int dy = targety - owner->y;
-    float distance = sqrtf(dx * dx * dy * dy);
+    int dx = targetx - (owner->x);
+    int dy = targety - (owner->y);
+
+    float distance = sqrtf(dx * dx + dy * dy);
+
 
     if (distance >= 2) {
         dx = (int)(round(dx / distance));
         dy = (int)(round(dy / distance));
-    }
 
-    if (engine.map->canWalk(owner->x + dx, owner->y + dy)) {
-        owner->x += dx;
-        owner->y += dy;
+
+
+        if (engine.map->canWalk(owner->x + dx, owner->y + dy)) {
+            owner->x += dx;
+            owner->y += dy;
+
+        }
     }
-    else if (owner->attacker && canAttack(owner->x, owner->y)) {
+   else if (owner->attacker) {
         owner->attacker->attack(owner, engine.player);
     }
 

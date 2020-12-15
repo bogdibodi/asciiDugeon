@@ -39,7 +39,7 @@ void Destructible::die(Actor* owner) {
 	engine.sendToBack(owner);
 }
 void MonsterDestructible::die(Actor* owner) {
-	printf("%s is dead", owner->name);
+	printf("%s is dead\n", owner->name);
 	Destructible::die(owner);
 }
 void PlayerDestructible::die(Actor* owner) {

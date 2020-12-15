@@ -1,5 +1,6 @@
 #pragma once
 
+// make a sword enemy that after its killed you can weild it
 
 
 class Actor

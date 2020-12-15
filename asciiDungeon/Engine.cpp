@@ -22,8 +22,6 @@ Engine::~Engine() {
 	delete map;
 }
 
-
-
 void Engine::update() {
     TCOD_key_t key;
     if (gameStatus == STARTUP) map->computeFov();
