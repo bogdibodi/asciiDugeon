@@ -23,7 +23,7 @@ Aici se află funcțiile care se ocupă cu generarea nivelului si popularea aces
 #### Actor:
 Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ține cont de poziția jucătorului coordonatele acestuia sunt reținute si in Engine.
 Actor conține de asemnea pointeri catre obiecte de tip Destructible, AI si Attacker (inițializate NULL) pentru a selecta mai usor funcționalitățile necesare in funcție de necesitate. 
-Spre exemplu, un "orc" este un orc ce folosește toate cele trei implementări in timp ce un obiect (care va fi adăugat în curănd) obișnuit cum ar fi o sabie pe podea nu trebuie să se miște sau să atace.
+Spre exemplu, un "orc" este un actor ce folosește toate cele trei implementări in timp ce un obiect (care va fi adăugat în curănd) obișnuit cum ar fi o sabie de  pe podea nu trebuie să se miște sau să atace.
 
 
 
