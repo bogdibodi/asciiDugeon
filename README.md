@@ -29,4 +29,4 @@ Spre exemplu, un "orc" este un actor ce folosește toate cele trei implementări
 
 
 ## 3 Probleme cunoscute:
- Pentru a rezolva un bug în care inamicii atacau jucătorul de la orice distanță căt timp erau in cămpul vizual am implementat o soluție în care inamicul are voie sa attace doar atunci cand jucătorul este lănga acesta. Acest lucru a scos la iveala o nouă problemă în care aceștia nu iși urmăresc ținta niciodată ci aleg să stea pe loc indefinitiv. În urma unor teste am observat că in anumite situații acestia aleg sa urmărească jucătorul dar încă nu cunosc condițiile declanșatoare.
+REZOLVAT Pentru a rezolva un bug în care inamicii atacau jucătorul de la orice distanță căt timp erau in cămpul vizual am implementat o soluție în care inamicul are voie sa attace doar atunci cand jucătorul este lănga acesta. Acest lucru a scos la iveala o nouă problemă în care aceștia nu iși urmăresc ținta niciodată ci aleg să stea pe loc indefinitiv. În urma unor teste am observat că in anumite situații acestia aleg sa urmărească jucătorul dar încă nu cunosc condițiile declanșatoare.
