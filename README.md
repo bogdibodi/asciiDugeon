@@ -6,7 +6,7 @@
 
 ## 2 Funcționalitate:
 ### 2.1 Despre cum se joacă
- Mișcarea se realizează folosind săgețile de la tastatură, (Acest lucru o să fie înlocuit cu butoanele de pe numpad pentru a creea posibilitatea jucătorului de a se deplasa și pe diagonală, urmează sa fie adăugate si comenzi pentru a accesa inventarul) 
+ Mișcarea se realizează folosind săgețile de la tastatură, (Acest lucru o să fie înlocuit cu butoanele de pe numpad pentru a creea posibilitatea jucătorului de a se deplasa și pe diagonală, urmează sa fie adăugate si comenzi pentru a accesa inventarul). Jucătorul atacă in momentul în care acesta se loveste de un inamic. 
 ### 2.2 Despre structura jocului
  Inițial asciiDungeon a fost conceput in C. Dupa o serie de dificultăți legate de organizarea programului și de faptul că un proiect de acest gen necesită multe obiecte care lucrează împreuna am decis să folosesc C++. Tranziția nu a fost dificilă avand in vedere ca librariile (libtcod și SDL2) au rămas compatibile. Structura jocului nu este foarte complexă, componentele principale sunt:
 - Engine
@@ -15,15 +15,17 @@
   - Destructible
   - AI
   - Attacker
-- BspListener
 
 #### Engine:
 După cum spune și numele, aceasta este motorul jocului. Prin Engine se apeleaza functiile update() si render(). Tot ce se intamplă în program ajunge intr-un final aici pentru a concretiza schimbările făcute in timpul jocului (mișcare, moartea unui inamic sau a jucătorului).
 #### Map:
-
+Aici se află funcțiile care se ocupă cu generarea nivelului si popularea acestuia cu actori.
 #### Actor:
+Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ține cont de poziția jucătorului coordonatele acestuia sunt reținute si in Engine.
+Actor conține de asemnea pointeri catre obiecte de tip Destructible, AI si Attacker (inițializate NULL) pentru a selecta mai usor funcționalitățile necesare in funcție de necesitate. 
+Spre exemplu, un "orc" este un orc ce folosește toate cele trei implementări in timp ce un obiect (care va fi adăugat în curănd) obișnuit cum ar fi o sabie pe podea nu trebuie să se miște sau să atace.
 
-#### BspListener:
+
 
 
 ## 3 Probleme cunoscute:
