@@ -1,6 +1,7 @@
 #pragma once
 #include "libtcod.hpp"
 class Actor;
+#include "Gui.h"
 #include "Destructible.h"
 #include "Attacker.h"
 #include "Ai.h"

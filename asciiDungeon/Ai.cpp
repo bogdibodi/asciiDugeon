@@ -38,7 +38,7 @@ bool PlayerAi::moveOrAttack(Actor* owner, int targetx, int targety) {
         Actor* actor = *iterator;
         if (actor->destructible && actor->destructible->isDead()
             && actor->x == targetx && actor->y == targety) {
-            printf("There's a %s here\n", actor->name);
+            engine.gui->message(TCODColor::lightGrey, "THere's a %s here", actor->name);
         }
     }
     owner->x = targetx;
@@ -53,14 +53,23 @@ void MonsterAi::update(Actor* owner) {
     }
 
     if (engine.map->isInFov(owner->x, owner->y)) {
+        // if see player move towards
+        moveCount = TRACKING_TURNS;
+    }
+    else {
+        moveCount--;
+    }
+    if (moveCount > 0) {
         moveOrAttack(owner, engine.player->x, engine.player->y);
     }
 
 }
-
 void MonsterAi::moveOrAttack(Actor* owner, int targetx, int targety) {
     int dx = targetx - (owner->x);
     int dy = targety - (owner->y);
+    int stepdx = (dx > 0 ? 1 : -1);
+    int stepdy = (dy > 0 ? 1 : -1);
+
 
     float distance = sqrtf(dx * dx + dy * dy);
 
@@ -69,13 +78,17 @@ void MonsterAi::moveOrAttack(Actor* owner, int targetx, int targety) {
         dx = (int)(round(dx / distance));
         dy = (int)(round(dy / distance));
 
-        std::cout << "Monster coords:" << std::endl;
-        std::cout << owner->x << " " << owner->y << std::endl;
 
         if (engine.map->canWalk(owner->x + dx, owner->y + dy) == true) {
             owner->x += dx;
             owner->y += dy;
         }
+        else if (engine.map->canWalk(owner->x + stepdx, owner->y)) {
+            owner-> x += stepdx;
+        }
+        else if (engine.map->canWalk(owner->x, owner->x + stepdy)) {
+            owner->y += stepdy;
+            }
     }
    else if (owner->attacker) {
         owner->attacker->attack(owner, engine.player);

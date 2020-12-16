@@ -39,10 +39,10 @@ void Destructible::die(Actor* owner) {
 	engine.sendToBack(owner);
 }
 void MonsterDestructible::die(Actor* owner) {
-	printf("%s is dead\n", owner->name);
+	engine.gui->message(TCODColor::lightGrey, "%s is dead", owner->name);
 	Destructible::die(owner);
 }
 void PlayerDestructible::die(Actor* owner) {
-	printf("You died!");
+	engine.gui->message(TCODColor::red, "You died!");
 	engine.gameStatus = Engine::DEFEAT;
 }
