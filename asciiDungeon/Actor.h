@@ -15,15 +15,13 @@ public:
 	Attacker* attacker; // dmg dealer
 	Destructible* destructible; //something that breaks
 	Ai* ai;
+	Pickable* pickable;
+	Container* container;
 
 
 
 	Actor(int x, int y, int ch, const char* name, const TCODColor &col);
-	~Actor() {
-		delete attacker;
-		delete destructible;
-		delete ai;
-	};
+	~Actor();
 
 	void update();
 	// bool moveOrAttack(int x, int y); 

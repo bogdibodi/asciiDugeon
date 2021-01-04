@@ -12,6 +12,7 @@ public:
 	static const int ROOM_MAX_SIZE = 12;
 	static const int ROOM_MIN_SIZE = 6;
 	static const int MAX_ROOM_MONSTERS = 3;
+	static const int MAX_ROOM_ITEMS = 2;
 
 	int width, height;
 
@@ -30,6 +31,9 @@ public:
 	bool isInFov(int x, int y) const;
 	bool isExplored(int x, int y) const;
 	void computeFov();
+	// --
+
+	void addItem(int x, int y);
 
 	void render() const;
 protected:

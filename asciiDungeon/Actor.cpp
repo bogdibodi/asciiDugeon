@@ -10,7 +10,17 @@
 		, attacker(NULL)
 		, destructible(NULL)
 		, ai(NULL)
+		, pickable(NULL)
+		, container(NULL)
 	{}
+
+	Actor::~Actor() {
+		if (attacker) delete attacker;
+		if (destructible) delete destructible;
+		if (ai) delete ai;
+		if (pickable) delete pickable;
+		if (container) delete container;
+	}
 
 	void Actor::render() const {
 		TCODConsole::root->setChar(x, y, ch);
@@ -39,3 +49,5 @@
 	}
 	*/
 	
+
+

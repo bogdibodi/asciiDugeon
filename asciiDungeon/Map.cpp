@@ -47,6 +47,14 @@
 	}
 	*/
 
+	void Map::addItem(int x, int y) {
+		Actor* healthPotion = new Actor(x, y, '!', "health potion",
+			TCODColor::violet);
+		healthPotion->blocks = false;
+		healthPotion->pickable = new Healer(4);
+		engine.actors.push(healthPotion);
+	}
+
 	bool Map::canWalk(int x, int y) const {
 		if (isWall(x, y)) {
 			return false;
@@ -119,6 +127,16 @@
 				}
 				nbMonsters--;
 			}
+
+			// add items
+			int nbItems = rng ->getInt(0, MAX_ROOM_ITEMS);
+			while (nbItems > 0) {
+				int x = rng->getInt(x1, x2);
+				int y = rng->getInt(y1, y2);
+				if (canWalk(x, y)) addItem(x, y);
+				nbItems--;
+			}
+
 		}
 	}
 	void Map::render() const {

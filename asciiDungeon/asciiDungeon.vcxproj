@@ -164,6 +164,7 @@
   <ItemGroup>
     <ClCompile Include="Actor.cpp" />
     <ClCompile Include="Ai.cpp" />
+    <ClCompile Include="Cotainer.cpp" />
     <ClCompile Include="Gui.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Attacker.cpp" />
@@ -171,17 +172,20 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Destructible.cpp" />
+    <ClCompile Include="Pickable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
     <ClInclude Include="Ai.h" />
     <ClInclude Include="Attacker.h" />
     <ClInclude Include="BspListener.h" />
+    <ClInclude Include="Container.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Destructible.h" />
     <ClInclude Include="Gui.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Pickable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
