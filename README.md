@@ -9,7 +9,7 @@
  Mișcarea se realizează folosind săgețile de la tastatură, (Acest lucru o să fie înlocuit cu butoanele de pe numpad pentru a creea posibilitatea jucătorului de a se deplasa și pe diagonală, urmează sa fie adăugate si comenzi pentru a accesa inventarul). Jucătorul atacă in momentul în care acesta se loveste de un inamic. 
 ### 2.2 Despre structura jocului
  Inițial asciiDungeon a fost conceput in C. Dupa o serie de dificultăți legate de organizarea programului și de faptul că un proiect de acest gen necesită multe obiecte care lucrează împreuna am decis să folosesc C++. Tranziția nu a fost dificilă avand in vedere ca librariile (libtcod și SDL2) au rămas compatibile. Structura jocului nu este foarte complexă, componentele principale sunt:
-- Engine
+- Engine   (DE INLOCUIT CU O DIAGRAMA)
 - Map
 - Actor
   - Destructible
