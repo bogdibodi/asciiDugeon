@@ -15,72 +15,72 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Actor.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Actor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Attacker.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Engine.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Container.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BspListener.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Destructible.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Destructible.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Engine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Attacker.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Gui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Ai.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Gui.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Persistent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cotainer.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Pickable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Pickable.cpp">
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Ai.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Actor.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Actor.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Ai.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Engine.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Attacker.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BspListener.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Container.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Destructible.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Destructible.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Engine.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Attacker.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Gui.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ai.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\main.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Gui.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Map.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Pickable.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Persistent.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Container.h">
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Pickable.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

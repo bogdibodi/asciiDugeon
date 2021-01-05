@@ -26,6 +26,32 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Actor.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Ai.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Attacker.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Container.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Destructible.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Engine.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Gui.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\main.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Map.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Persistent.cpp" />
+    <ClCompile Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Pickable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Actor.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Ai.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Attacker.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Container.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Destructible.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Engine.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Gui.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\main.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Map.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Persistent.hpp" />
+    <ClInclude Include="..\..\..\..\Desktop\libtcod-tutorial-e31ff4d0b302\src11\Pickable.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -92,11 +118,14 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\lib\libtcod-1.16.0-alpha.15-x86_64-msvc\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\x64;C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\lib\libtcod-1.16.0-alpha.15-x86_64-msvc\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\lib\libtcod-1.16.0-alpha.15-x86_64-msvc\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\x64;C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\lib\libtcod-1.16.0-alpha.15-x86_64-msvc\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Test|x64'">
+    <IncludePath>C:\Users\Bob\source\repos\asciiDungeon\asciiDungeon\x64;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -161,32 +190,6 @@
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Actor.cpp" />
-    <ClCompile Include="Ai.cpp" />
-    <ClCompile Include="Cotainer.cpp" />
-    <ClCompile Include="Gui.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Attacker.cpp" />
-    <ClCompile Include="BspListener.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Map.cpp" />
-    <ClCompile Include="Destructible.cpp" />
-    <ClCompile Include="Pickable.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Actor.h" />
-    <ClInclude Include="Ai.h" />
-    <ClInclude Include="Attacker.h" />
-    <ClInclude Include="BspListener.h" />
-    <ClInclude Include="Container.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="Destructible.h" />
-    <ClInclude Include="Gui.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="Pickable.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

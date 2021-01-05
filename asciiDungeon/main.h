@@ -1,7 +1,7 @@
 #pragma once
-#include "libtcod.hpp"
+#include "lib/libtcod-1.16.0-alpha.15-x86_64-msvc/include/libtcod.h"
 class Actor;
-#include "Gui.h"
+#include "Persistent.h"
 #include "Destructible.h"
 #include "Attacker.h"
 #include "Ai.h"
@@ -9,5 +9,5 @@ class Actor;
 #include "Container.h"
 #include "Actor.h"
 #include "Map.h"
-#include "BspListener.h"
+#include "Gui.h"
 #include "Engine.h"
