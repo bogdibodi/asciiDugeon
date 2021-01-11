@@ -22,7 +22,8 @@ După cum spune și numele, aceasta este motorul jocului. Prin Engine se apeleaz
 Aici se află funcțiile care se ocupă cu generarea nivelului si popularea acestuia cu actori.
 #### Actor:
 
-![alt text](https://github.com/bogdibodi/asciiDungeon/img/actor_diagram.png )
+![actor_diagram](https://user-images.githubusercontent.com/23166665/104172787-79d14d00-540d-11eb-9e60-3c96775846d8.png)
+
 
 Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ține cont de poziția jucătorului coordonatele acestuia sunt reținute si in Engine.
 Actor conține de asemnea pointeri catre obiecte de tip Destructible, AI si Attacker (inițializate NULL) pentru a selecta mai usor funcționalitățile necesare.
