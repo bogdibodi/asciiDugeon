@@ -47,7 +47,8 @@ Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ți
 Actor conține de asemnea pointeri catre obiecte de tip Destructible, AI, Attacker, Pickable si Container (inițializate NULL) pentru a selecta mai usor funcționalitățile necesare.
 Spre exemplu, un "orc" este un actor ce folosește toate cele trei implementări in timp ce o poțiune  nu trebuie să se miște sau să atace dar trebuie sa aplice un efect in momentul în care este folosită.
 
-![actor_diagram](https://user-images.githubusercontent.com/23166665/104172787-79d14d00-540d-11eb-9e60-3c96775846d8.png)
+![diagrama_actor](https://user-images.githubusercontent.com/23166665/104309194-75bf3100-54da-11eb-9e0f-f38edbb64618.png)
+
 
 
 
