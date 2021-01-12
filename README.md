@@ -24,6 +24,13 @@
     - LightningBolt
   - Container
   
+#### Engine:
+Aceasta conține fluxul jocului. În main.cpp sunt apelate engine.update() și engine.render() atât timp căt fereastra jocului este deschisă. 
+### engine.update()
+Folosind o enumerație pentru flag-uri (STARTUP, IDLE, NEW_TURN) funcția update pornește jocul sau iterează o tură noua.
+### engine.render()
+Aici se apelează mai departe funcțiile care desenează nivelul, actorii si interfața jucătorului.
+
 #### Actor:
 Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ține cont de poziția jucătorului coordonatele acestuia sunt reținute si in Engine.
 Actor conține de asemnea pointeri catre obiecte de tip Destructible, AI, Attacker, Pickable si Container (inițializate NULL) pentru a selecta mai usor funcționalitățile necesare.
