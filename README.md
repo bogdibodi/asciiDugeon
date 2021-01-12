@@ -20,6 +20,8 @@
     - MonsterAI
   - Attacker
   - Pickable
+    - Healer
+    - LightningBolt
   - Container
   
 #### Actor:
