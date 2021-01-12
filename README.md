@@ -26,9 +26,9 @@
   
 #### Engine:
 Aceasta conține fluxul jocului. În main.cpp sunt apelate engine.update() și engine.render() atât timp căt fereastra jocului este deschisă. 
-##### engine.update()
+engine.update():
 Folosind o enumerație pentru flag-uri (STARTUP, IDLE, NEW_TURN) funcția update pornește jocul sau iterează o tură noua.
-##### engine.render()
+engine.render():
 Aici se apelează mai departe funcțiile care desenează nivelul, actorii si interfața jucătorului.
 
 #### Map
