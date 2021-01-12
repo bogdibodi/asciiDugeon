@@ -32,15 +32,15 @@ engine.render():
  Aici se apelează mai departe funcțiile care desenează nivelul, actorii si interfața jucătorului.
 
 #### Map
-Se ocupă cu generarea nivelului și popularea acestuia cu inamici, poțiuni sau vrăji.
+Pentru a creea un nivel harta este împărțită in jumătate succesiv păna cand se ajunge la o marime minimă setată (ROOM_MIN_SIZE) și se creeaza coridoare intre camere. Pe urmă se apelează addMonster(), si addItem() popularea acestuia cu inamici, poțiuni sau vrăji. 
 
 #### Persistent
-Această clasă este folosita pentru a reține progresul jocului în cazul in care jucătorul se oprește inainte să moară. Pentru fiecare clasă din diagramă au fost create funcțiile save() si load(). 
+Această clasă este folosita pentru a reține progresul jocului în cazul in care jucătorul se oprește inainte să moară. Pentru fiecare clasă din diagramă au fost create funcțiile save() si load(). Toată informația este salvată intr-un .zip folosind o implementare oferită de libtcod.
 
 ![persistent_diag](https://user-images.githubusercontent.com/23166665/104303507-d5b1d980-54d2-11eb-8236-b69933a044dc.png)
 
 #### Gui
-Este componenta responsabilă de generarea pentru combat log, inventar, bara de xp si de viață
+Este componenta responsabilă de generarea pentru combat log, inventar, bara de xp, bara de viața și afișează numele unui actor atunci cand jucătorul îl selecteaza folosind mouse-ul.
 
 #### Actor:
 Clasa Actor se ocupa cu implementarea jucătorului si a inamicilor. Pentru a ține cont de poziția jucătorului coordonatele acestuia sunt reținute si in Engine.
