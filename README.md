@@ -6,7 +6,7 @@
 
 ## 2 Funcționalitate:
 ### 2.1 Despre cum se joacă
- Mișcarea se controleaza după săgețile de la tastarură sau numpad. Inventarul se deschide cu 'i' si scările se coboară cu 's'.
+ Mișcarea se controleaza după săgețile de la tastarură sau numpad. Inventarul se deschide cu 'i' si scările se coboară cu 's'. Pentru a lua un obiect de pe jos se apasă 'g'.
 ### 2.2 Despre structura jocului
  Inițial asciiDungeon a fost conceput in C. Dupa o serie de dificultăți legate de organizarea programului și de faptul că un proiect de acest gen necesită multe obiecte care lucrează împreuna am decis să folosesc C++. Tranziția nu a fost dificilă avand in vedere ca librariile (libtcod și SDL2) au rămas compatibile. Structura jocului este:
 - Engine   
