@@ -32,7 +32,7 @@ engine.render():
  Aici se apelează mai departe funcțiile care desenează nivelul, actorii si interfața jucătorului.
 
 #### Map
-Pentru a creea un nivel harta este împărțită in jumătate succesiv păna cand se ajunge la o marime minimă setată (ROOM_MIN_SIZE) și se creeaza coridoare intre camere. Pe urmă se apelează addMonster(), si addItem() popularea acestuia cu inamici, poțiuni sau vrăji. 
+Pentru a creea un nivel harta este împărțită in jumătate succesiv păna cand se ajunge la o marime minimă setată (ROOM_MIN_SIZE) și se creeaza coridoare intre camere. Pe urmă se apelează addMonster(), si addItem() pentru popularea acestuia cu inamici, poțiuni sau vrăji. 
 
 #### Persistent
 Această clasă este folosita pentru a reține progresul jocului în cazul in care jucătorul se oprește inainte să moară. Pentru fiecare clasă din diagramă au fost create funcțiile save() si load(). Toată informația este salvată intr-un .zip folosind o implementare oferită de libtcod.
